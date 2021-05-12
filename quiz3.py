@@ -43,7 +43,7 @@ for each in photo_set:
 con = sqlite3.connect('mri.db')
 cur = con.cursor()
 
-cur.execute('''CREATE TABLE "mars_images" (
+cur.execute('''CREATE TABLE IF NOT EXISTS "mars_images" (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	img_src TEXT(150),
 	date TEXT(30)
